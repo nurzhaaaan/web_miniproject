@@ -1,0 +1,121 @@
+/* Base styles and Typography */
+body {
+    font-family: 'PT Sans', sans-serif;
+    color: #4a4a4a;
+    background-color: #fffdf9; /* Light cream background */
+    overflow-x: hidden;
+}
+
+/* Hero Section: Applied background image and overlay */
+.hero-section {
+    position: relative;
+    padding: 160px 0 100px 0;
+    /* Background image with a light overlay for readability */
+    background: linear-gradient(rgba(255, 252, 245, 0.7), rgba(255, 252, 245, 0.7)), 
+                url('img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 85vh;
+}
+
+/* Main Heading Style */
+.main-title {
+    font-size: 3.5rem;
+    color: #d88d44; /* Artistic orange/brown color */
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.instructor {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Features list with custom bullet points */
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 40px;
+}
+
+.features-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.features-list li::before {
+    content: "•";
+    color: #d88d44;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    top: -5px;
+}
+
+/* Primary Action Button */
+.btn-orange {
+    background-color: #f39c12;
+    color: white;
+    padding: 16px 45px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+}
+
+.btn-orange:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px); /* Subtle lift effect */
+    color: white;
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+}
+
+/* Art Image: Polaroid/Paper effect */
+.main-art {
+    border: 15px solid white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: rotate(3deg); /* Artistic tilt */
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+}
+
+.main-art:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* Info Section Styles */
+.info-section {
+    background: white;
+    border-top: 1px solid #f0f0f0;
+}
+
+.label {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .border-mobile-none {
+        border-right: none !important;
+        margin-bottom: 20px;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+}
